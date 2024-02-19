@@ -1,0 +1,13 @@
+
+#index-item {
+  text-decoration: underline;
+}
+body {
+  /* background: linear-gradient(to bottom right,rgb(0, 0, 0),rgb(166, 195, 234),rgb(255, 255, 255) fixed); */
+  /* background-size: 800% 800%; */
+  /* height: 100vh; */
+  /* animation: gradient-animation 8s ease infinite; */
+  background: linear-gradient(175deg, rgb(96, 125, 230) 40%, rgb(255, 255, 255) 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+}
