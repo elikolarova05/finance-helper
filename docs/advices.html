@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/advices-style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../resources/icon.ico">
+  <title>Полезни съвети</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="../javascript/loadPage.js"></script>
+</head>
+
+
+<body>
+  <div id="navbar"></div>
+  <div id="roadmap" class="d-flex justify-content-center">
+    <h1>Наръчник за Финансови понятия</h1>
+    <h6>*Кликнете върху изображенията, за да видите тяхното значение*</h6>
+    <div id="map" style="display: flex;"></div>
+  </div>
+  <div id="finance-advices" class="d-flex flex-column mb-3">
+    <div class="p-3">
+      <h1>Полезни финансови съвети</h1>
+      <h2>1. Поставете си ясни и реалистични цели</h2>
+      <h5>Ключът към доброто финансово планиране е поставянето на ясни цели. Започнете, като разграничите вашите
+        краткосрочни и дългосрочни стремежи. Краткосрочните цели могат да бъдат спестяване за ваканция или изплащане на
+        дълг по кредитна карта, докато дългосрочните могат да включват закупуване на къща или планиране на пенсиониране.
+      </h5>
+    </div>
+    <div class="p-3">
+      <h2>2. Разберете навиците си за харчене</h2>
+      <h5>Преди да започнете да изготвяте бюджет, е изключително важно да получите ясна картина на текущото си финансово
+        състояние. Това означава да пресметнете приходите и разходите си. Започнете с щателно проследяване на разходите
+        си. Всяко кафе, всяка сметка, всяка импулсивна онлайн покупка – проследете я. Категоризирайте тези разходи в
+        категории като фиксирани разходи (наем, комунални услуги), инвестиции (акции, пенсионни фондове), спестявания и
+        разходи за вашите желания (заведения за хранене, хобита).</h5>
+    </div>
+    <div class="p-3">
+      <h2>3. Създайте разумен бюджет</h2>
+      <h5>Използвайки информацията от проследяването на вашите разходи, можете да съставите бюджет, който отразява
+        истинската ви финансова картина. Определете областите, в които давате най-много пари. Страхотна рамка за
+        бюджетиране е правилото 50/30/20, което разделя разходите по следния начин: 50% от доходите отиват за нужди, 30%
+        за желания и 20% за спестявания и инвестиции. Това правило гарантира балансиран подход, покриващ основните неща,
+        като същевременно не пренебрегва спестяванията.</h5>
+    </div>
+
+    <div class="p-3">
+      <h2>4. Научете се как инвестирате</h2>
+      <h5>Започнете, като разберете различните видове инвестиции – акции, облигации, взаимни фондове, ETF и недвижими
+        имоти, за да назовем само няколко. Всеки има свой собствен рисков профил и потенциална възвръщаемост. Например,
+        акциите могат да предложат висока възвръщаемост, но идват с по-висок риск, докато облигациите обикновено са
+        по-стабилни, но предлагат по-ниска възвръщаемост. Обучаването на тези основи е от решаващо значение. Ресурси
+        като книги, онлайн курсове и финансови блогове като този могат да бъдат безценни.</h5>
+    </div>
+    <div class="p-3">
+      <h2>5. Запознайте се с инвестиционните фондове </h2>
+      <h5>Това са различни планове, които, ако изберем, ще изберем и различен риск. Има инвестиционни планове с много
+        малък риск. Това значи, че колкото пари дадем, почти толкова трябва да получим. Има и по-рискови планове, които
+        евентуално ще ни донесат по-висока доходност. Важно е да разгледаме различните възможности и да изберем
+        правилната за нас.</h5>
+    </div>
+    <div class="p-3">
+      <h2>6.Преглед на застрахователното покритие</h2>
+      <h5>Застраховката играе централна роля във всеки цялостен финансов план. Тя действа като предпазна мрежа,
+        защитавайки вас и вашите активи от непредвидени събития. Редовното преразглеждане на вашето застрахователно
+        покритие гарантира, че сте адекватно защитени с развитието на вашите житейски обстоятелства и финансови
+        ситуации.</h5>
+    </div>
+
+  </div>
+
+  <script type="module">
+        let definitions = (await load("resources/definitions.txt")).split('\n')
+    let ids = ["asset", "bond", "simple-interest", "compound-interest", "bank", "broadcasting",
+      "individual", "corporation", "collateral", "dividend", "depreciation", "cost-price", "franchise", "cession", "liability"]
+    let isForMobile = false;
+    loadPage('navbar', 'navbar')
+
+    async function updateMapContent() {
+      if (window.innerWidth <= 767) {
+        await loadResource("roadmap-mobile.svg", "map");
+        isForMobile = true;
+      } else {
+        await loadResource("roadmap.svg", "map");
+        isForMobile = false;
+      }
+      addDefinitionOnClick()
+    }
+    await updateMapContent()
+
+    window.addEventListener('resize', updateMapContent);
+
+
+    function addDefinitionOnClick() {
+
+      for (const id of ids) {
+        document.getElementById(id).onclick = () => { loadDefinition(definitions[ids.indexOf(id)], id) };
+      }
+      function loadDefinition(message, id) {
+        const existingDiv = document.getElementById("definition");
+
+        if (existingDiv) {
+          existingDiv.remove();
+          loadDefinition(message, id)
+        } else {
+          const rect = document.getElementById(id).getBoundingClientRect();
+          const x = rect.left + window.scrollX;
+          const y = rect.top + window.scrollY;
+          const newDiv = document.createElement("div");
+          document.body.appendChild(newDiv);
+          newDiv.style.top = `${y - 100}px`;
+          newDiv.textContent = message;
+          newDiv.id = "definition";
+          newDiv.style.display = "block";
+          if (isForMobile && x - 160 < 0) {
+            newDiv.style.left = `${Math.abs(x - 160)}px`;
+          } else if (isForMobile) {
+            newDiv.style.left = `${window.innerWidth - newDiv.offsetWidth - 80}px`
+          } else {
+            newDiv.style.left = `${x - 160}px`;
+          }
+
+          document.addEventListener("click", handleOutsideClick);
+        }
+      }
+      function handleOutsideClick(event) {
+        const definitionDiv = document.getElementById("definition");
+        if (definitionDiv && !definitionDiv.contains(event.target) && !isInsideAnyCircle(event.clientX, event.clientY)) {
+          definitionDiv.remove();
+          document.removeEventListener("click", handleOutsideClick);
+        }
+      }
+
+
+      function isInsideAnyCircle(x, y) {
+        for (let id of ids) {
+          const rect = document.getElementById(id).getBoundingClientRect();
+
+          if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+            return true;
+          }
+        }
+        return false;
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

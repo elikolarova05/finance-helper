@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
 
-
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -27,10 +26,8 @@
 .nav{
   -bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 0.5rem;
-
     display: flex;
     flex-direction: column;
     padding-left: 0;
-
     list-style: none;
 }

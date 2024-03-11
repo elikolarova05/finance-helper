@@ -6,9 +6,13 @@
    id="Layer_1"
    viewBox="0 0 300 300"
    xml:space="preserve"
-   sodipodi:docname="loan-svgrepo-com.svg"
+   sodipodi:docname="loan-payments.svg"
    width="300"
    height="300"
+   inkscape:export-filename="loan-payments.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,14 +30,23 @@
    inkscape:showpageshadow="0"
    inkscape:pageopacity="0"
    inkscape:pagecheckerboard="0"
-   inkscape:deskcolor="#505050" />
+   inkscape:deskcolor="#505050"
+   inkscape:zoom="2.6233333"
+   inkscape:cx="150"
+   inkscape:cy="177.0648"
+   inkscape:window-width="1920"
+   inkscape:window-height="1001"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
 
 <path
-   style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:8.354;stroke-dasharray:none;stroke-opacity:1"
+   style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:4;stroke-dasharray:none;stroke-opacity:1"
    d="M 228.52257,294.41828 H 70.805051 c -8.117815,0 -14.786023,-7.21616 -14.786023,-16.00106 V 51.578756 c 0,-8.784894 6.668208,-16.001054 14.786023,-16.001054 H 228.23265 c 8.11782,0 14.78602,7.21616 14.78602,16.001054 V 278.73097 c 0.28993,8.7849 -6.37828,15.68731 -14.4961,15.68731 z"
    id="path1" />
 <path
-   style="fill:#ffffff;fill-opacity:1;stroke-width:0.795922"
+   style="fill:#ffffff;fill-opacity:1;stroke-width:4;stroke-dasharray:none"
    d="m 203.53585,21.039679 h -33.3538 c 0,-11.593395 -8.56795,-21.19935075 -19.5839,-21.19935075 -10.70994,0 -19.58388,9.27471575 -19.58388,21.19935075 H 97.048452 c -4.589965,0 -8.567935,3.974876 -8.567935,9.274714 V 54.494904 H 211.79779 V 30.314393 c 0.30601,-4.968596 -3.67197,-9.274714 -8.26194,-9.274714 z m -52.9377,10.599674 c -5.50797,0 -9.79194,-4.637358 -9.79194,-10.599674 0,-5.962317 4.28397,-10.599676 9.79194,-10.599676 5.50797,0 9.79196,4.637359 9.79196,10.599676 0,5.962316 -4.28399,10.599674 -9.79196,10.599674 z"
    id="path2" />
 <g
@@ -90,9 +103,9 @@
    transform="matrix(3.3050504,0,0,3.4141761,-149.21419,-163.64276)"><tspan
      x="73.484375"
      y="81.694058"
-     id="tspan2"><tspan
+     id="tspan4"><tspan
        style="font-size:12px;font-family:Constantia;-inkscape-font-specification:'Constantia, Normal'"
-       id="tspan1">ЗАЕМ</tspan></tspan></text><text
+       id="tspan3">ЗАЕМ</tspan></tspan></text><text
    xml:space="preserve"
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.2611px;font-family:Constantia;-inkscape-font-specification:'Constantia, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:5.64969;stroke-dasharray:none;stroke-opacity:0"
    x="178.26575"
