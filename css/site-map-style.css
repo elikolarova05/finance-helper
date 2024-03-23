@@ -3,11 +3,11 @@
 }
 
 body {
-  background-color: rgb(160, 192, 234) !important;
+  background-color: rgb(186, 201, 255) !important;
 }
 
 .main-card {
-  background-color: rgb(34 115 214);
+  background-color: #0165B9;
   border-radius: 15px;
   width: 150px;
   height: 150px;
@@ -22,9 +22,6 @@ body {
   text-decoration: none !important;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#map a::after {
-  text-decoration: underline;
-}
 
 .sub-card {
   background-color: rgb(88, 140, 203);
@@ -36,11 +33,4 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-}
-
-
-.card-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

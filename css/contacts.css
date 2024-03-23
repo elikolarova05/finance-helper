@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 #contacts-item {
     text-decoration: underline;
 }
-
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #2139b0 0%, #3ebbe4 46%, #ff70fa 100%);
-    align-content: center;
+    background-color: rgb(65, 88, 208);
+    background: linear-gradient(217deg, rgb(183, 62, 243), rgba(255,0,0,0) 50.71%),
+            linear-gradient(127deg, rgb(6, 24, 227), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgb(9, 105, 240), rgba(0,0,255,0) 70.71%);
+ 
     min-height: 100vh;
 }
 
@@ -17,7 +24,7 @@ section {
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 12px;
-    margin-top: 5%;
+    margin-top: 10%;
     padding: 2%;
     color: #fff;
 }

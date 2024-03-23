@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="../javascript/loadPage.js"></script>
+  <script src="../javascript/load.js"></script>
 </head>
 
 <body>
@@ -20,41 +20,38 @@
   <script>
     loadPage('navbar', 'navbar')
 
-    let titles = [
-      { "Начало": [] },
-      { "Калкулатори": ["авто-мото", "заеми", "инвестиции", "спестявания", "студенти", "кредити"] },
-      { "Полезни съвети": [] },
-      { "Контакти": [] }
-    ];
     let pages = [
-      { "index.html": [] },
+      { "title": "Начало", "link": "index.html", "subpages": [] },
       {
-        "calculator-menu.html": ["calculator-template.html?type=auto",
-          "calculator-template.html?type=loan",
-          "calculator-template.html?type=investments",
-          "calculator-template.html?type=savings",
-          "calculator-template.html?type=student",
-          "calculator-template.html?type=credits"]
+        "title": "Калкулатори", "link": "calculator-menu.html",
+        "subpages": [
+          { "title": "авто-мото", "link": "calculator-template.html?type=auto" },
+          { "title": "заеми", "link": "calculator-template.html?type=loan" },
+          { "title": "инвестиции", "link": "calculator-template.html?type=investments" },
+          { "title": "спестявания", "link": "calculator-template.html?type=savings" },
+          { "title": "студенти", "link": "calculator-template.html?type=student" },
+          { "title": "кредити", "link": "calculator-template.html?type=credit" }
+        ]
       },
-      { "advices.html": [] },
-      { "contacts.html": [] }
-    ];
+      { "title": "Полезни съвети", "link": "advices.html", "subpages": [] },
+      { "title": "Контакти", "link": "contacts.html", "subpages": [] }
+    ]
 
-    titles.forEach((obj) => {
-      
-      for (const [title, subpages] of Object.entries(obj)) {
-        let index = titles.findIndex(item => Object.keys(item)[0] === title);
-        let main = createCard(title, "main-card", Object.keys(pages[index]));
+    pages.forEach((page) => {
 
-        let column = document.createElement("div");
-        column.classList.add("card-column");
-        document.getElementById("map").appendChild(column);
-        column.appendChild(main);
-        subpages.forEach((subpage, subpageIndex) => {
-          column.appendChild(createCard(subpage, "sub-card", pages[index][ Object.keys(pages[index])][subpageIndex]));
-        })
-      };
+      let main = createCard(page.title, "main-card", page.link);
+      let column = document.createElement("div");
+      column.classList.add("d-flex");
+      column.classList.add("flex-column");
+      column.classList.add("align-items-center");
+      document.getElementById("map").appendChild(column);
+      column.appendChild(main);
+      page.subpages.forEach((subpage) => {
+        column.appendChild(createCard(subpage.title, "sub-card", subpage.link));
+
+      })
     });
+
     function createCard(text, className, link) {
       let a = document.createElement("a");
       a.href = link;

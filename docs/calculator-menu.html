@@ -12,45 +12,48 @@
     <title>Калкулатор</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="../javascript/loadPage.js"></script>
+    <script src="../javascript/load.js"></script>
 </head>
 
 <body>
     <div id="navbar"></div>
-    <div class="d-flex justify-content-around" style="margin-top: 7%;">
-        <div id="card-holder">
-            <a href="../docs/calculator-template.html?type=auto" class="calculator-item">
-                <img class="card-image" src="../resources/car.svg" alt="">
-                <span>Авто-мото</span>
-            </a>
-            <a href="../docs/calculator-template.html?type=loan" class="calculator-item">
-                <img class="card-image" src="../resources/loan-payments.svg" alt="">
-                <span>Заеми</span>
+    <div id="menu">
+        <div id="inner-menu">
+            <div class="d-flex">
+                <div id="card-holder">
+                    <a href="../docs/calculator-template.html?type=auto" class="calculator-item">
+                        <img class="card-image" src="../resources/car.svg" alt="">
+                        <span>Авто-мото</span>
+                    </a>
+                    <a href="../docs/calculator-template.html?type=loan" class="calculator-item">
+                        <img class="card-image" src="../resources/loan-payments.svg" alt="">
+                        <span>Заеми</span>
 
-            </a>
-            <a href="../docs/calculator-template.html?type=investments" class="calculator-item">
-                <img class="card-image" src="../resources/investments.svg" alt="">
-                <span>Инвестиции</span>
+                    </a>
+                    </a>
+                    <a href="../docs/calculator-template.html?type=investments" class="calculator-item">
+                        <img class="card-image" src="../resources/investments.svg" alt="">
+                        <span>Инвестиции</span>
 
-            </a>
-            <a href="../docs/calculator-template.html?type=savings" class="calculator-item">
-                <img class="card-image" src="../resources/savings.svg" alt="">
-                <span>Спестявания</span>
+                    </a>
+                    <a href="../docs/calculator-template.html?type=savings" class="calculator-item">
+                        <img class="card-image" src="../resources/savings.svg" alt="">
+                        <span>Спестявания</span>
 
-            </a>
-            <a href="../docs/calculator-template.html?type=student" class="calculator-item">
-                <img class="card-image" src="../resources/student.svg" alt="">
-                <span>Студенти</span>
+                    </a>
+                    <a href="../docs/calculator-template.html?type=student" class="calculator-item">
+                        <img class="card-image" src="../resources/student.svg" alt="">
+                        <span>Студенти</span>
 
-            </a>
-            <a href="../docs/calculator-template.html?type=credit" class="calculator-item">
-                <img class="card-image" src="../resources/credit.svg" alt="">
-                <span>Кредити</span>
-            </a>
+                    </a>
+                    <a href="../docs/calculator-template.html?type=credit" class="calculator-item">
+                        <img class="card-image" src="../resources/credit.svg" alt="">
+                        <span>Кредити</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-
     <script>
         loadPage('navbar', 'navbar')
     </script>

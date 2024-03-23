@@ -3,26 +3,11 @@
 }
 
 body {
-	/* background: linear-gradient(175deg, rgb(4, 21, 82) 10%, rgb(96, 125, 230) 50%, rgb(255, 255, 255) 90%); */
-	background-color: rgb(18, 18, 142) !important;
+	background-color: #12128e !important;
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
 	min-height: 100vh;
 	background-attachment: fixed;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 #landing-page {
@@ -44,7 +29,7 @@ body {
 }
 
 #start-button {
-	background: rgb(0, 140, 255);
+	background: #009CDE;
 	box-shadow: 0 0 20px rgb(0, 140, 255);
 }
 
@@ -63,7 +48,7 @@ body {
 #title {
 	font-family: "Unbounded", Arial, Helvetica, sans-serif;
 	font-size: 40px;
-	background: linear-gradient(to right, rgb(255, 255, 255), rgb(14, 155, 198));
+	background: linear-gradient(to right, rgb(255, 255, 255), rgb(21, 170, 224));
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 }
@@ -73,61 +58,114 @@ body {
 }
 
 @media only screen and (min-width: 1px) and (max-width: 400px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.button {
+		display: flex;
+		margin-top: 4%;
+	}
+
+	#landing-page-mobile {
+		width: 40%;
+		margin: 1%;
+	}
 
 	#landing-page-image {
 		display: none;
 	}
 
 	#title {
-		font-size: 20px;
-		margin-top: 3%;
-		text-align: center;
-	}
-	#paragraph {
-		text-align: justify;
-		width: 95%;
+		font-size: 15px;
+		margin-top: 10%;
 	}
 
-	.button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 3%;
+	#paragraph {
+		font-size: 10px;
+		width: 90%;
 	}
 
 }
 
 @media only screen and (min-width: 401px) and (max-width: 766px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 
 	#landing-page-image {
 		display: none;
 	}
 
+	#landing-page-mobile {
+		width: 50%;
+		margin-bottom: 2%;
+	}
+
 	#title {
-		font-size: 30px;
-		margin-top: 3%;
-		text-align: center;
+		font-size: 25px;
+		margin-top: 6%;
 	}
 
 	#paragraph {
-		text-align: justify;
 		width: 95%;
+		font-size: 15px;
 	}
 
 	.button {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin-top: 3%;
+		margin-left: 5%;
+
 	}
 
 }
 
-@media only screen and (min-width: 767px) {
-	#landing-page-image {
-		width: 190%;
-		margin-top: 2%;
+@media only screen and (min-width: 767px) and (max-width: 1043px) {
 
+	#landing-page-image {
+		width: 170%;
+		margin-top: 2%;
+	}
+
+	#landing-page-mobile {
+		display: none;
+	}
+
+	#title {
+		font-size: 30px;
+		margin-top: 5%;
+	}
+
+	#paragraph {
+		text-align: left;
+		width: 70%;
+		margin-top: 2%;
+	}
+
+	#start-button {
+		margin-left: 5%;
+		margin-top: 5%;
+	}
+
+}
+
+@media only screen and (min-width: 1044px) {
+	#landing-page-image {
+		width: 170%;
+		margin-top: 2%;
+	}
+
+	#landing-page-mobile {
+		display: none;
 	}
 
 	#title {
@@ -138,8 +176,9 @@ body {
 		text-align: left;
 		width: 70%;
 		margin-top: 2%;
-	} 
-	#start-button{
+	}
+
+	#start-button {
 		margin-left: 5%;
 	}
 }

@@ -1,61 +1,76 @@
-#calculator-item {
-	text-decoration: underline;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body {
-    background-color: rgb(160, 192, 234) !important;
+.calculator-item {
+  width: 175px;
+  height: 175px;
+  background-color: rgb(68, 68, 229);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+}
+
+#menu {
+  position: absolute;
+  height: -webkit-fill-available;
+  width: 100%;
+  background-image: radial-gradient(white 30%, rgb(179, 179, 179)) !important;
+  background-repeat: no-repeat;
+}
+
+#inner-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#calculator-item {
+  text-decoration: underline;
+}
+
+#card-holder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
+
+.card-image {
+  width: 125px;
+  height: 125px;
+}
+
+@media (max-width:340px) {
+  #menu {
+    position: relative;
   }
-  
-  .flex-center {
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 900px) {
+  .card-image {
+    width: 75px;
+    height: 75px;
   }
-  
-  .calculator-item {
-    width: 175px;
-    height: 175px;
-    background-color: rgb(68, 68, 229);
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    flex-direction: column;
-    text-decoration: none;
-    color: white;
-  }
-  
+
   #card-holder {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 600px;
   }
-  
-  .card-image {
-    width: 125px;
-    height: 125px;
+
+  .calculator-item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
   }
-  
-  @media (max-width: 900px) {
-    .card-image {
-      width: 75px;
-      height: 75px;
-    }
-  
-    #card-holder {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 600px;
-    }
-  
-    .calculator-item {
-      width: 150px;
-      height: 150px;
-      margin: 10px;
-    }
-  }
-  
+}

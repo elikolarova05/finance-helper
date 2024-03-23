@@ -1,33 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 #navbar {
-
   font-weight: 600;
   background-color: rgb(255, 255, 255);
   font-family: 'Philosopher';
-
-}
-
-.nav{
-  -bs-nav-link-padding-x: 0;
-    --bs-nav-link-padding-y: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-    list-style: none;
 }

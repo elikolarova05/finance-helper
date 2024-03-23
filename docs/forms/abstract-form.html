@@ -1,46 +1,53 @@
-<div id="calculator-container" class="container-sm">
-   
-   <label for="auto-price">
+<div class="display-4 p-4" id="title"></div>
+
+<div class="container text-center p-3">
+   <label class="row p-2" for="range">
       <h3 id="question1">Каква сума ти е необходима?</h3>
    </label>
-   <div class="d-flex">
-      <span id="question1-min">0</span>
-      <div class="input">
-         <input id="range" type="range" min="0" max="300000" value="0.00" step="100"
-            oninput="this.nextElementSibling.value = this.value" name="budget" required>
-
-         <output id="question1-output">0</output>
+   <div class="row">
+      <span class="col" id="question1-min">0</span>
+      <div class="input col-9 ">
+         <input style="width: 100%;" id="range" type="range" min="0" max="300000" value="0.00" step="100"
+            oninput="updateInput('question1-output', this.value)" name="budget" required>
+         <input id="question1-output" type="number" class="output offset-md-1" min="0" max="300000"
+            oninput="updateRange('range', this.value)">
       </div>
-      <span id="question1-max">300 000</span>
+      <span class="col" id="question1-max">300 000</span>
    </div>
-   
-   <label for="interest">
+</div>
+
+<div class="container text-center p-2">
+   <label class="row p-2" for="interest">
       <h3 id="question2">Какъв е лихвеният процент?</h3>
    </label>
-   <div class="d-flex">
-      <span id="question2-min">0</span>
-      <div class="input">
-         <input id="interest" oninput="this.nextElementSibling.value = this.value" type="range" min="0"
-            max="10" value="0.00" step="0.01" name="interest" required>
-         <output id="output">0</output>
-      </div>
-      <span id="question2-max">10</span>
-   </div>
+   <div class="row">
+      <span class="col" id="question2-min">0</span>
+      <div class="input col-9">
+         <input style="width: 100%;" id="interest" oninput="updateInput('question2-output', this.value)" type="range" min="0" max="10"
+            value="0.00" step="0.01" name="interest" required>
+         <input id="question2-output" type="number" class="output offset-md-1" min="0" max="10" value="0.01"
+            oninput="updateRange('interest', this.value)">
 
-   <label for="auto-period">
-      <h3 id="question3">Преполагаем срок на изплащане в месеци:</h3>
+      </div>
+      <span class="col" id="question2-max">10</span>
+   </div>
+</div>
+
+<div class="container text-center p-2">
+   <label class="row p-2" for="period">
+      <h3 id="question3">Предполагаем срок на изплащане в месеци:</h3>
    </label>
-   <div class="d-flex">
-      <span id="question3-min">0</span>
-      <div class="input">
-         <input id="period" type="range" oninput="this.nextElementSibling.value = this.value" min="0" max="48"
+   <div class="row">
+      <span class="col" id="question3-min">0</span>
+      <div class="input col-9">
+         <input style="width: 100%;" id="period" type="range" oninput="updateInput('question3-output', this.value)" min="0" max="48"
             step="1" value="0.00" name="period" required>
-         <output id="output">0</output>
+         <input id="question3-output" type="number" class="output offset-md-1" min="0" max="48"
+            oninput="updateRange('period', this.value)">
       </div>
-      <span id="question3-max">48</span>
+      <span class="col" id="question3-max">48</span>
    </div>
-
-   <div>
-      <button type="submit" class="btn btn-primary">Изчисли</button>
-   </div>
+</div>
+<div>
+   <button type="submit" class="btn btn-primary">Изчисли</button>
 </div>
