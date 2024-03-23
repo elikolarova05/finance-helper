@@ -8,7 +8,7 @@ async function loadResource(name, id) {
 
 async function load(path, isJson = false) {
     try {
-        const response = await fetch(`finance-helper/${path}`);
+        const response = await fetch(`/${path}`);
         if (isJson) {
             return await response.json()
         }
