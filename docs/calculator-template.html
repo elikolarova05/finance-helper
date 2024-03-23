@@ -39,7 +39,7 @@
             case "student": studentCalculator(); break;
             case "credit": creditCalculator(); break;
         }
-        let questions = await load("../resources/questions.json", true)
+        let questions = await load("resources/questions.json", true)
 
         await loadPage('navbar', 'navbar')
         await loadPage(`forms/${formHTML}`, "form")
